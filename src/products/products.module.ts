@@ -1,15 +1,14 @@
 import { Module } from '@nestjs/common';
+import { PokemonesService } from './services/pokemon.service';
+import { PokemonesController} from './controllers/pokemones.controller';
 
-import { ProductsController } from './controllers/products.controller';
-import { BrandsController } from './controllers/brands.controller';
-import { CategoriesController } from './controllers/categories.controller';
-import { ProductsService } from './services/products.service';
-import { BrandsService } from './services/brands.service';
-import { CategoriesService } from './services/categories.service';
+import { MaestroService } from './services/maestros.services';
+import { MaestrosController} from './controllers/maestros.controller';
+
 
 @Module({
-  controllers: [ProductsController, CategoriesController, BrandsController],
-  providers: [ProductsService, BrandsService, CategoriesService],
-  exports: [ProductsService],
+  controllers: [PokemonesController, MaestrosController],
+  providers: [PokemonesService, MaestroService],
+  exports: [],
 })
 export class ProductsModule {}
