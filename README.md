@@ -27,7 +27,7 @@ http://localhost:3000/maestro/
     "age": "12"
 }
 
-3.- Asociar pokemon con entrenador. POST:
+3.- Asociar pokemon con entrenador. PUT:
 http://localhost:3000/pokemones/20
 
 {
